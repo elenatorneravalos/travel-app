@@ -144,3 +144,7 @@ def update_user_profile(request):
         return JsonResponse({'message': 'User profile updated successfully.'})
     else:
         return JsonResponse({'message': 'Invalid request method.'}, status=400)
+
+def my_view(request):
+    print(request.META['HTTP_HOST'])
+    # Rest of your code
